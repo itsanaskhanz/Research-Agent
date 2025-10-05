@@ -1,8 +1,12 @@
+import os
+from dotenv import load_dotenv
 from tools import scrape_page, search_web
 from agents import Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel
 from agents.run import RunConfig
 
-gemini_api_key = ""
+load_dotenv()
+
+gemini_api_key = os.getenv("GEMINI_API_KEY")
 
 external_client = AsyncOpenAI(
     api_key=gemini_api_key,
