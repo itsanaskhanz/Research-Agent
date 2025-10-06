@@ -10,6 +10,7 @@ dependencies = [
     { name = "beautifulsoup4" },
     { name = "ddgs" },
     { name = "openai-agents" },
+    { name = "python-dotenv" },
 ]
 
 [package.metadata]
@@ -17,6 +18,7 @@ requires-dist = [
     { name = "beautifulsoup4", specifier = ">=4.14.2" },
     { name = "ddgs", specifier = ">=9.6.0" },
     { name = "openai-agents", specifier = ">=0.3.3" },
+    { name = "python-dotenv", specifier = ">=1.1.1" },
 ]
 
 [[package]]

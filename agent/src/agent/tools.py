@@ -10,7 +10,8 @@ def scrape_page(url: str, max_chars: int = 3000):
     Fetch and clean text content from a web page.
     """
     try:
-        html = requests.get(url, timeout=10).text
+        headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+        html = requests.get(url, headers=headers, timeout=10).text
         soup = BeautifulSoup(html, "html.parser")
         paragraphs = [p.text for p in soup.find_all("p")]
         text = " ".join(paragraphs)
